@@ -1,6 +1,6 @@
-import bg_img from '../assets/img.jpg'
 export const bgStyle = {
-  backgroundImage: `url(${bg_img})`,
+  backgroundImage:
+    "url(https://source.unsplash.com/random/1000x1200/?todolist)",
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",
   backgroundPosition: "center",

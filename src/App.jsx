@@ -1,23 +1,29 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Header from "./components/Header.jsx";
 import TodoList from "./components/TodoList.jsx";
 import { bgStyle } from "./Supporters/css.js";
 import { userContext } from "./Hooks/context.js";
 import Footer from "./components/Footer.jsx";
+import AddTodo from "./components/AddTodo.jsx";
 const App = () => {
   const [todoList, SettodoList] = useState([]);
 
   return (
     <>
-      <div style={bgStyle} className=" h-screen">
+      <div
+        style={bgStyle}
+        className="h-[calc(100vh-65px)] sm:h-[calc(100vh-52px)]">
         <Header />
-        <div className="flex justify-center">
-          <userContext.Provider value={{ todoList, SettodoList }}>
+        <userContext.Provider value={{ todoList, SettodoList }}>
+          <AddTodo />
+          <div className="flex justify-center h-[32rem] overflow-auto  scrollbar-w-0">
             <TodoList />
-          </userContext.Provider>
-        </div>
+          </div>
+        </userContext.Provider>
       </div>
-      <Footer/>
+      <div>
+        <Footer />
+      </div>
     </>
   );
 };

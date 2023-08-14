@@ -1,14 +1,12 @@
-import AddTodo from "./AddTodo";
 import TodoFragment from "./TodoFragment";
 import { getLocalStorage } from "../Supporters/LocalStorage";
 import { useState } from "react";
 
 const TodoList = () => {
-  const [value, setValue] = useState(false);//For rerendering after deleting the TodoFragment
+  const [value, setValue] = useState(false); //For rerendering after deleting the TodoFragment
 
   function TodoFragRender() {
     const localStorageData = getLocalStorage();
-
     if (localStorageData) {
       return localStorageData.map((element, index) => (
         <TodoFragment
@@ -22,10 +20,7 @@ const TodoList = () => {
   }
   return (
     <>
-      <div className="w-full sm:w-2/5 ">
-        <AddTodo />
-        {TodoFragRender()}
-      </div>
+      <div className="w-full sm:w-2/5 ">{TodoFragRender()}</div>
     </>
   );
 };

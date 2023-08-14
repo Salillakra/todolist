@@ -3,12 +3,14 @@
 @tailwind utilities;
 
 body {
-    font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
-
-.form-checkbox{
-    --tw-text-opacity: 1;
-    accent-color: rgb(34 197 94 / var(--tw-text-opacity));
+.form-checkbox {
+  --tw-text-opacity: 1;
+  accent-color: rgb(34 197 94 / var(--tw-text-opacity));
 }
 
+.scrollbar-w-0::-webkit-scrollbar {
+  width: 0;
+}
