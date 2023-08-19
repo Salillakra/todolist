@@ -20,9 +20,9 @@ Before you begin, ensure you have the following installed:
 
 1. Clone this repository to your local machine.
 
-   ```bash
+```bash
    git clone https://github.com/Salillakra/todo.git
-   ```
+```
 
 3. Install the project dependencies.
 ```bash
@@ -47,4 +47,4 @@ Before you begin, ensure you have the following installed:
 
 The app uses React components to manage the Todo List. The `localStorage` API is used to store and retrieve the todo items and their checked states, ensuring that they persist even after the browser is closed.
 
-When you
+When you add a new todo item, it is stored in the local storage with a unique identifier. When you mark a todo item as completed or delete it, the corresponding changes are updated in the local storage.
